@@ -894,4 +894,9 @@
         </addColumn>
     </changeSet>
 
+    <changeSet id="fix_invalid_enum_value" author="katja danilova">
+        <sql>
+            UPDATE exhibitiondevice SET screenorientation = 'FORCED_PORTRAIT' WHERE type = 'FORCEDPORTRAIT';
+        </sql>
+    </changeSet>
 </databaseChangeLog>
