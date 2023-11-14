@@ -23,7 +23,7 @@ class SettingsController {
     fun getMqttSettings(): MqttSettings {
         return MqttSettings(
             serverUrl = System.getenv("MQTT_SERVER_URL"),
-            serverUrls = System.getenv("MQTT_SERVER_URLS").split(","),
+            serverUrls = System.getenv("MQTT_SERVER_URLS")?.split(","),
             topic = System.getenv("MQTT_TOPIC"),
             username = System.getenv("MQTT_USERNAME"),
             password = System.getenv("MQTT_PASSWORD")
