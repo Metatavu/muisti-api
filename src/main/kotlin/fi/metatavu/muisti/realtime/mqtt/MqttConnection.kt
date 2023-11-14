@@ -134,6 +134,12 @@ class MqttConnection {
             }
         }
 
+        /**
+         * Returns server urls
+         *
+         * @param settings MQTT settings
+         * @return server urls
+         */
         private fun getServerUrls(settings: MqttSettings): Array<String> {
             val serverUrl = settings.serverUrl
             val serverUrls = settings.serverUrls
