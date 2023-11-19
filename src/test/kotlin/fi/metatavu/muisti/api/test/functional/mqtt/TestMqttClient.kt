@@ -22,7 +22,8 @@ class TestMqttClient(private val settings: MqttTestSettings): MqttCallback, Auto
             serverUrl = settings.mqttServerUrl,
             topic = settings.mqttTopic,
             username = null,
-            password = null
+            password = null,
+            serverUrls = null
         ))
 
         MqttConnection.setSubscriber(this)
